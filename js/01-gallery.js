@@ -31,6 +31,9 @@ function createModalWindow(e) {
         onShow: () => {
             addEventListener('keydown', onEscapePress);
         },
+         onClose: () => {
+        removeEventListener("keydown", onEscapePress);
+      },
     });
 
     function onEscapePress(e) {
