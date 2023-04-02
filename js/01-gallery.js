@@ -34,8 +34,9 @@ function createModalWindow(e) {
     });
 
     function onEscapePress(e) {
-        if (e.code !== 'Escape') return;
-        instance.close();
+        if (e.code === 'Escape') {
+            instance.close();
+        }
     }
     instance.show();
 }
